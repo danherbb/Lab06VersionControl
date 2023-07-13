@@ -7,7 +7,10 @@ def encode(password):
     return encoded_password
 
 def decode(encoded_password):
-    ...
+    decoded_password = ''
+    for i in encoded_password:
+        decoded_password += str(int(i) - 3)
+    return decoded_password
 
 def main():
     menu_str = '\nMenu\n-------------\n1. Encode\n2. Decode\n3. Quit\n'
